@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[markdown的基本语法]]></title>
+    <url>%2F2019%2F08%2F01%2Fmarkdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[一、标题123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题 注意：标题内容和最后一个#号之间有1个空格。 效果： 二、字体1234*这是斜体***这是粗体*****斜体加粗***~删除线~ 效果：这是斜体这是粗体斜体加粗删除线 三、引用123&gt;引用&gt;&gt;引用&gt;&gt;&gt;引用 提示：通过上面的例子可以发现，&#39;&gt;&#39;可以嵌套使用。 效果： 引用 引用 引用 四、分割线1234---***---**** 提示：三个及以上个数的&#39;*&#39;或者&#39;-&#39;都能产生一条横线， 五、引入图片1![图片不见了](/images/logo.jpg &quot;标题&quot;) 提示：[]包裹的图片链接失效时的提示信息，()内前半部分是图片的地址,这里使用的是绝对路径，也可以使用url来引用网络上的图片,鼠标悬浮在图片上时显示的内容，有些浏览器不支持,该内容是可选的。 效果： 六、超链接1[baidu](http://baidu.com) 效果：baidu 七、换行 说明：如果我们想把一行文本进行换行，我们可以在需要换行的地方输入至少两个空格，然后回车即可。 例如： 12markdown 另起一行 效果：markdown另起一行 八、代码块 说明：单行代码使用``这个符号括起来，就能显示成一个代码块。多行代码使用至少4个空格缩进或者一个tab键或者使用``` ```将代码块包起来，都能以代码块的形式显示多行代码。 例如： 12345`&lt;html&gt;&lt;/html&gt;`**** public static void main(String[] args)&#123; System.out.println(&quot;hello world!&quot;); &#125; 效果：&lt;html&gt;&lt;/html&gt; public static void main(String[] args){ System.out.println(&quot;hello world!&quot;); }九、列表 说明：*和+和-后面跟一个空格产生一个无序列表数字或字母后面跟一个.然后再跟一个空格就会产生有序列表 例如： * 列表1 * 子列表1 * 子列表2 - 列表2 - 子列表1 - 子列表2 + 列表3 + 子列表1 + 子列表2 **** 1. 列表1 a. 子列表1 b. 子列表2 2. 列表2 a. 子列表1 b. 子列表2 3. 列表3 a. 子列表1 b. 子列表2效果： 列表1 子列表1 子列表2 列表2 子列表1 子列表2 列表3 子列表1 子列表2 列表1a. 子列表1b. 子列表2 列表2a. 子列表1b. 子列表2 列表3a. 子列表1b. 子列表2]]></content>
+      <categories>
+        <category>小技能</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>标记语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建个人博客]]></title>
+    <url>%2F2019%2F08%2F01%2F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[一、搭建个人博客的详细过程1.下载安装Node.js 2.下载安装Git]]></content>
+      <categories>
+        <category>小技能</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
