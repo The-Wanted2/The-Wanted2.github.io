@@ -287,12 +287,37 @@
                 
               
 
-              <time title="创建时间：2019-08-31 13:11:45 / 修改时间：16:44:09" itemprop="dateCreated datePublished" datetime="2019-08-31T13:11:45+08:00">2019-08-31</time>
+              <time title="创建时间：2019-08-31 13:11:45" itemprop="dateCreated datePublished" datetime="2019-08-31T13:11:45+08:00">2019-08-31</time>
             </span>
           
             
 
             
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-03 13:59:04" itemprop="dateModified" datetime="2019-09-03T13:59:04+08:00">2019-09-03</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习小结-笔记/" itemprop="url" rel="index"><span itemprop="name">学习小结&笔记</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           <br>
@@ -306,16 +331,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
+          <h1 id="一、jquery选择器"><a href="#一、jquery选择器" class="headerlink" title="一、jquery选择器"></a>一、jquery选择器</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#bookId_input&quot;);  //获得id为bookId_input的元素    </span><br><span class="line">$(&quot;.main&quot;);	//获得所有class为main的元素</span><br><span class="line">$(&quot;p&quot;);	//获得所有p标签</span><br><span class="line">$(&quot;.main p&quot;);	//获得所有class为main的元素的子元素p</span><br><span class="line">$(&quot;*&quot;);	//获得所有元素</span><br><span class="line">$(this);	//获得当前元素</span><br><span class="line">$(&quot;p.intro&quot;);	//获得class为intro的p标签</span><br><span class="line">$(&quot;p:first&quot;);	//第一个p标签</span><br><span class="line">$(&quot;ul li:first&quot;);	//第一个ul的第一个子元素li</span><br><span class="line">$(&quot;ul li:first-child&quot;);	//每一个ul的第一个子元素li</span><br><span class="line">$(&quot;[href]&quot;);	//所有具有href属性的元素</span><br><span class="line">$(&quot;a[target=&apos;_blank&apos;]&quot;);	//所有属性target=&quot;_blank&quot;的a标签</span><br><span class="line">$(&quot;a[target!=&apos;_blank&apos;]&quot;);	//所有属性target不等于&apos;_blank&apos;的a标签</span><br><span class="line">$(&quot;:button&quot;);	//所有type=button的input标签和button标签</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
           
-            <h1 id="一、jquery选择器"><a href="#一、jquery选择器" class="headerlink" title="一、jquery选择器"></a>一、jquery选择器</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#bookId_input&quot;)  	//获得id为bookId_input的元素    </span><br><span class="line">$(&quot;.main&quot;)				//获得所有class为main的元素</span><br><span class="line">$(&quot;p&quot;)					//获得所有p标签</span><br><span class="line">$(&quot;.main p&quot;)			//获得所有class为main的元素的子元素p</span><br><span class="line">$(&quot;*&quot;)					//获得所有元素</span><br><span class="line">$(this)					//获得当前元素</span><br><span class="line">$(&quot;p.intro&quot;)			//获得class为intro的p标签</span><br><span class="line">$(&quot;p:first&quot;)			//第一个p标签</span><br><span class="line">$(&quot;ul li:first&quot;)		//第一个ul的第一个子元素li</span><br><span class="line">$(&quot;ul li:first-child&quot;)	//每一个ul的第一个子元素li</span><br><span class="line">$(&quot;[href]&quot;)				//所有有属性href的元素</span><br><span class="line">$(&quot;a[target=&apos;_blank&apos;]&quot;)	//所有属性target=&quot;_blank&quot;的a标签</span><br><span class="line">$(&quot;a[target!=&apos;_blank&apos;]&quot;)//所有属性target不等于&apos;_blank&apos;的a标签</span><br><span class="line">$(&quot;:button&quot;)			//所有type=button的input标签和button标签</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、隐藏和显示标签"><a href="#二、隐藏和显示标签" class="headerlink" title="二、隐藏和显示标签"></a>二、隐藏和显示标签</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).hide()	//隐藏选择器选中的标签</span><br><span class="line">$(&quot;p&quot;).show()	//显示选择器选中的标签</span><br><span class="line">$(selector).hide(speed,callback)	//speed是隐藏的毫秒值，callback是隐藏之后执行的方法</span><br><span class="line">$(&quot;p&quot;).toggle()	//在隐藏和显示之间切换</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>$(selector).hide(speed,callback) 如果选择选中的元素有n个，则回调函数也会执行n次</p>
-</blockquote>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/31/jquery笔记/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
@@ -868,7 +893,9 @@
         
           
         
-        <span class="site-state-item-count">3</span>
+          
+        
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -899,7 +926,9 @@
         
           
         
-        <span class="site-state-item-count">8</span>
+          
+        
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
