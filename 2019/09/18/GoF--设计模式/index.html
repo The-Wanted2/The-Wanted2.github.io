@@ -57,19 +57,21 @@
   };
 </script>
 
-  <meta name="description" content="一、创建型模式创建型模式对类的实例化过程进行了抽象，能够将软件模块中对象的创建和对象的使用分离开来。 1.简单工厂模式简单工厂模式又称为静态工厂方法模式，其并不是GoF23种设计模式中的一员，但是用得也比较多。简单工厂模式专门定义一个类来负责创建其他类的实例，该类拥有一个静态方法，通过传递不同的参数给该静态方法，可以获得不同类的实例对象。被创建的实例通常都具有相同的父类或实现同一个接口。">
+  <meta name="description" content="一、设计模式概述1.面向对象设计原则一个可维护性较低的软件设计通常由如下四个原因造成：">
 <meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式--GoF">
 <meta property="og:url" content="http://yoursite.com/2019/09/18/GoF--设计模式/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="一、创建型模式创建型模式对类的实例化过程进行了抽象，能够将软件模块中对象的创建和对象的使用分离开来。 1.简单工厂模式简单工厂模式又称为静态工厂方法模式，其并不是GoF23种设计模式中的一员，但是用得也比较多。简单工厂模式专门定义一个类来负责创建其他类的实例，该类拥有一个静态方法，通过传递不同的参数给该静态方法，可以获得不同类的实例对象。被创建的实例通常都具有相同的父类或实现同一个接口。">
+<meta property="og:description" content="一、设计模式概述1.面向对象设计原则一个可维护性较低的软件设计通常由如下四个原因造成：">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/2019-9/1.png">
-<meta property="og:updated_time" content="2019-09-18T13:37:45.444Z">
+<meta property="og:image" content="http://yoursite.com/images/2019-9/2.png">
+<meta property="og:image" content="http://yoursite.com/images/2019-9/3.png">
+<meta property="og:updated_time" content="2019-10-25T13:52:47.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式--GoF">
-<meta name="twitter:description" content="一、创建型模式创建型模式对类的实例化过程进行了抽象，能够将软件模块中对象的创建和对象的使用分离开来。 1.简单工厂模式简单工厂模式又称为静态工厂方法模式，其并不是GoF23种设计模式中的一员，但是用得也比较多。简单工厂模式专门定义一个类来负责创建其他类的实例，该类拥有一个静态方法，通过传递不同的参数给该静态方法，可以获得不同类的实例对象。被创建的实例通常都具有相同的父类或实现同一个接口。">
+<meta name="twitter:description" content="一、设计模式概述1.面向对象设计原则一个可维护性较低的软件设计通常由如下四个原因造成：">
 <meta name="twitter:image" content="http://yoursite.com/images/2019-9/1.png">
   <link rel="canonical" href="http://yoursite.com/2019/09/18/GoF--设计模式/">
 
@@ -289,11 +291,21 @@
                 
               
 
-              <time title="创建时间：2019-09-18 20:06:50 / 修改时间：21:37:45" itemprop="dateCreated datePublished" datetime="2019-09-18T20:06:50+08:00">2019-09-18</time>
+              <time title="创建时间：2019-09-18 20:06:50" itemprop="dateCreated datePublished" datetime="2019-09-18T20:06:50+08:00">2019-09-18</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-25 21:52:47" itemprop="dateModified" datetime="2019-10-25T21:52:47+08:00">2019-10-25</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -332,33 +344,219 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="一、创建型模式"><a href="#一、创建型模式" class="headerlink" title="一、创建型模式"></a>一、创建型模式</h1><p>创建型模式对类的实例化过程进行了抽象，能够将软件模块中对象的创建和对象的使用分离开来。</p>
-<h5 id="1-简单工厂模式"><a href="#1-简单工厂模式" class="headerlink" title="1.简单工厂模式"></a>1.简单工厂模式</h5><p>简单工厂模式又称为静态工厂方法模式，其并不是GoF23种设计模式中的一员，但是用得也比较多。简单工厂模式专门定义一个类来负责创建其他类的实例，该类拥有一个静态方法，通过传递不同的参数给该静态方法，可以获得不同类的实例对象。被创建的实例通常都具有相同的父类或实现同一个接口。</p>
+        <h3 id="一、设计模式概述"><a href="#一、设计模式概述" class="headerlink" title="一、设计模式概述"></a>一、设计模式概述</h3><h4 id="1-面向对象设计原则"><a href="#1-面向对象设计原则" class="headerlink" title="1.面向对象设计原则"></a>1.面向对象设计原则</h4><p>一个可维护性较低的软件设计通常由如下四个原因造成：   </p>
 <a id="more"></a>
 
+<ul>
+<li>过于僵硬：很难在一个软件系统中添加新的功能，增加一个新的功能将涉及多个模块，造成系统改动较大。例如在源代码中存在大量的硬编码，几乎所有的修改都要面向程序源代码进行。  </li>
+<li>过于脆弱：与“过于僵硬”同时存在，修改已有系统时代码过于脆弱，对一个地方的修改会导致看上去没有关系的另一个地方发生故障。</li>
+<li>复用率低：复用是指一个软件的组成部分可以在同一个项目的不同地方甚至在不同的项目中重用。复用率低则相反。</li>
+<li>黏度过高：对系统进行改动时，有时候可以保存系统的原始设计意图和原始设计框架，有时候可以破坏原始意图和框架。前者对系统的扩展性更有利，应该尽量按照前者进行改动。如果采用后者比前者更容易，则称系统的黏度过高，黏度过高将导致程序员采用错误的代码维护方案。</li>
+</ul>
+<p>一个好的系统设计应该具备下面的三个特性： </p>
+<ul>
+<li>可扩展性：容易将新的功能添加到现有的系统中，与“过于僵硬”相对应。</li>
+<li>灵活性：代码修改时不会涉及很多其他的模块，与“过于脆弱”相对应。</li>
+<li>可插入性：可以很方便的将一个类抽取出来，同时将另一个有相同接口的类添加进来，与“黏度过高”相对应。</li>
+</ul>
+<p>如何使系统满足上面三个性质，其关键在于恰当的提高系统的可维护性和可复用性。传统的代码复用技术，有时候会导致系统的可维护性降低。例如：A和B都需要使用同一个模块C，如果A需要C添加一个新的行为，但B不需要甚至不允许C增加该行为。如果坚持复用C，就不得不以系统的可维护性为代价，如修改B的代码。如果从保持系统可维护性的角度出发，就只好放弃复用。面向对象设计复用在一定程度上可以解决两者的矛盾。  </p>
+<p>面向对象设计复用的目标在于实现支持可维护性的复用。通过抽象和继承使得类的定义可以复用，通过多态使得类的实现可以复用，通过抽象和封装可以保持和促进系统的可维护性。</p>
+<p>每一种设计模式都蕴含着至少一种面向对象设计原则，面向对象设计原则包含如下7个：</p>
+<table>
+<thead>
+<tr>
+<th align="center">原则名称</th>
+<th align="center">原则解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">单一职责原则</td>
+<td align="center">类的职责要单一，不能将太多的职责放在一个类中。</td>
+</tr>
+<tr>
+<td align="center">开闭原则</td>
+<td align="center">软件实体对扩展是开放的，但对修改是关闭的，即在不修改一个软件实体的基础上去扩展其功能</td>
+</tr>
+<tr>
+<td align="center">里氏代换原则</td>
+<td align="center">在软件系统中，一个可以接受基类对象的地方一定可以接受一个子类的对象</td>
+</tr>
+<tr>
+<td align="center">依赖倒转原则</td>
+<td align="center">要针对抽象层编程，不要针对具体类编程</td>
+</tr>
+<tr>
+<td align="center">接口隔离原则</td>
+<td align="center">使用多个专门的接口来取代一个统一的接口</td>
+</tr>
+<tr>
+<td align="center">合成复用原则</td>
+<td align="center">在复用功能时，尽量多使用组合和聚合关系，少使用甚至不适用继承关系</td>
+</tr>
+<tr>
+<td align="center">迪米特法则</td>
+<td align="center">一个软件实体对其他实体的引用越少越好，或者说如果两个类不必彼此直接通信，那么两个类就不应该发生直接的相互作用，而是通过引入一个第三者完成间接交互</td>
+</tr>
+</tbody></table>
+<h4 id="2-设计模式的分类"><a href="#2-设计模式的分类" class="headerlink" title="2.设计模式的分类"></a>2.设计模式的分类</h4><p>根据目的、用途的不同将设计模式分为：创建性模式、结构性模式和行为性模式。创建型模式主要用于创建对象，结构型模式主要用于处理类和对象的组合，行为性模式主要用于描述类或对象的交互以及职责分配。</p>
+<p>根据处理范围的不同设计模式又可分为：类模式和对象模式。类模式处理类与子类的关系，这种关系通过继承来建立，属于静态关系，在编译时候确定下来；对象模式处理对象之间的关系，关系在运行时发生变化，属于动态关系。</p>
+<p>GoF 23种设计模式：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>创建型模式</th>
+<th>结构型模式</th>
+<th>行为型模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类模式</td>
+<td>工厂方法模式</td>
+<td>（类）适配器模式</td>
+<td>解释器模式、模板方法模式</td>
+</tr>
+<tr>
+<td>对象模式</td>
+<td>抽象工厂模式、建造者模式、原型模式、单例模式</td>
+<td>（对象）适配器模式、桥接模式、组合模式、装饰模式、外观模式、享元模式、代理模式</td>
+<td>职责链模式、命令模式、迭代器模式、中介者模式、备忘录模式、观察者模式、状态模式、策略模式、访问者模式</td>
+</tr>
+</tbody></table>
+<h3 id="二、创建型模式"><a href="#二、创建型模式" class="headerlink" title="二、创建型模式"></a>二、创建型模式</h3><p>创建型模式关注对象的创建过程，它将对象的创建和使用分离，在使用对象时无需知道对象的创建细节，外界对于这些对象只需要知道他们的公共接口，这使得整个系统的设计更加符合单一职责原则。创建型模式主要包括6种：</p>
+<ul>
+<li>简单工厂模式（非GoF 23中的成员）</li>
+<li>工厂方法模式</li>
+<li>抽象工厂模式</li>
+<li>建造者模式</li>
+<li>原型模式</li>
+<li>单例模式</li>
+</ul>
+<h4 id="1-简单工厂模式"><a href="#1-简单工厂模式" class="headerlink" title="1.简单工厂模式"></a>1.简单工厂模式</h4><p>简单工厂模式又称为静态工厂方法模式，其并不是GoF23种设计模式中的一员，但是用得也比较多。简单工厂模式专门定义一个类来负责创建其他类的实例，该类拥有一个静态方法，通过传递不同的参数给该静态方法，可以获得不同类的实例对象。<strong>被创建的实例通常都具有相同的父类或实现同一个接口。</strong></p>
 <p>案例：</p>
 <p>抽象基类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public abstract class AbstractPay &#123;</span><br><span class="line">    public abstract void pay();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractPay</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>现金支付类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class CashPay extends AbstractPay &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void pay() &#123;</span><br><span class="line">        System.out.println(&quot;现金支付！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CashPay</span> <span class="keyword">extends</span> <span class="title">AbstractPay</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"现金支付！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>信用卡支付类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class CreditcardPay extends AbstractPay &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void pay() &#123;</span><br><span class="line">        System.out.println(&quot;信用卡支付！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreditcardPay</span> <span class="keyword">extends</span> <span class="title">AbstractPay</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"信用卡支付！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>工厂类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class PayMethodFactory &#123;</span><br><span class="line">    public static AbstractPay getPayMethod(String type)throws Exception&#123;</span><br><span class="line">        if(&quot;cash&quot;.equals(type))&#123;</span><br><span class="line">            return new CashPay();</span><br><span class="line">        &#125;else if(&quot;creditcard&quot;.equals(type))&#123;</span><br><span class="line">            return new CreditcardPay();</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            throw new Exception(&quot;不支持&quot;+type+&quot;类型的支付方式！&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PayMethodFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> AbstractPay <span class="title">getPayMethod</span><span class="params">(String type)</span><span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">"cash"</span>.equals(type))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> CashPay();</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"creditcard"</span>.equals(type))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> CreditcardPay();</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"不支持"</span>+type+<span class="string">"类型的支付方式！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>测试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Client &#123;</span><br><span class="line">    public static void main(String[] args)throws Exception&#123;</span><br><span class="line">        System.out.println(&quot;--------------现金支付--------------&quot;);</span><br><span class="line">        AbstractPay cashPay = PayMethodFactory.getPayMethod(&quot;cash&quot;);</span><br><span class="line">        cashPay.pay();</span><br><span class="line">        System.out.println(&quot;---------------信用卡支付-------------&quot;);</span><br><span class="line">        AbstractPay creditcardPay = PayMethodFactory.getPayMethod(&quot;creditcard&quot;);</span><br><span class="line">        creditcardPay.pay();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span><span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"--------------现金支付--------------"</span>);</span><br><span class="line">        AbstractPay cashPay = PayMethodFactory.getPayMethod(<span class="string">"cash"</span>);</span><br><span class="line">        cashPay.pay();</span><br><span class="line">        System.out.println(<span class="string">"---------------信用卡支付-------------"</span>);</span><br><span class="line">        AbstractPay creditcardPay = PayMethodFactory.getPayMethod(<span class="string">"creditcard"</span>);</span><br><span class="line">        creditcardPay.pay();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果：<br><img src="/images/2019-9/1.png" alt="图片不见了"></p>
 <p>总结：</p>
 <blockquote>
-<p>简单工厂模式存在的最大的问题在于工厂类的职责相对过重，增加新的产品时需要修改工厂类的判断逻辑，这一点与开闭原则相违背。</p>
+<ul>
+<li><p>简单工厂模式存在的最大的问题在于工厂类的职责相对过重，增加新的产品时需要修改工厂类的判断逻辑，这一点与开闭原则相违背。</p>
+</li>
+<li><p>另外，静态工厂中的方法是静态的，静态方法存在一个问题：java中子类不能通过重写父类的静态方法来实现对父类静态方法的扩展。对于静态方法的调用是根据引用类型来判断的，而不是根据引用所指向的实例的类型来判断的。换句话说，父类类型的引用即使指向的是子类的实例，且子类重新定义了父类的静态方法，父类引用在调用该静态方法时，也只会调用该静态方法在父类中的定义。</p>
+</li>
+</ul>
 </blockquote>
-<h5 id="2-工厂方法模式"><a href="#2-工厂方法模式" class="headerlink" title="2.工厂方法模式"></a>2.工厂方法模式</h5><p>工厂方法模式是GoF23种设计模式中的一员，这种模式与简单工厂模式很大的不同在于该模式将工厂类的职责进行了细分，其中定义了一个父类工厂用于定义创建产品对象的公共接口，对于每一类产品，都需要有一个对应的工厂类，该工厂类实现父类工厂接口，通过每种产品的工厂来分别获得每种产品的实例对象，而不是通过一个工厂类来获得所有产品的实例对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SuperClass</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"father"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SuperClass c = <span class="keyword">new</span> SubClass();</span><br><span class="line">        c.fun();<span class="comment">//调用的是父类的fun方法</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubClass</span> <span class="keyword">extends</span> <span class="title">SuperClass</span></span>&#123;</span><br><span class="line">    <span class="comment">//加上这个注解会报错，因为子类不能重写父类的静态方法</span></span><br><span class="line">    <span class="comment">//@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"son"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h4 id="2-工厂方法模式"><a href="#2-工厂方法模式" class="headerlink" title="2.工厂方法模式"></a>2.工厂方法模式</h4><p>工厂方法模式是GoF23种设计模式中的一员，这种模式与简单工厂模式很大的不同在于该模式将工厂类的职责进行了细分，其中定义了一个父类工厂用于定义创建产品对象的公共接口，对于每一类产品，都需要有一个对应的工厂类，该工厂类实现父类工厂接口，通过每种产品的工厂来分别获得每种产品的实例对象，而不是通过一个工厂类来获得所有产品的实例对象。</p>
+<p>案例：</p>
+<p>抽象工厂：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">PayMethodFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> AbstractPay <span class="title">getPayMethod</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现金支付工厂：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CashPayFactory</span> <span class="keyword">extends</span> <span class="title">PayMethodFactory</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> AbstractPay <span class="title">getPayMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> CashPay();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>信用卡支付工厂类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreditCardPayFactory</span> <span class="keyword">extends</span> <span class="title">PayMethodFactory</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> AbstractPay <span class="title">getPayMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> CreditcardPay();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>支付方式的抽象基类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractPay</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现金支付类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CashPay</span> <span class="keyword">extends</span> <span class="title">AbstractPay</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"现金支付！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>信用卡支付类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreditcardPay</span> <span class="keyword">extends</span> <span class="title">AbstractPay</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"信用卡支付！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    PayMethodFactory factory1 = <span class="keyword">new</span> CashPayFactory();</span><br><span class="line">    AbstractPay cashPay = factory1.getPayMethod();</span><br><span class="line">    cashPay.pay();</span><br><span class="line">    PayMethodFactory factory2= <span class="keyword">new</span> CreditCardPayFactory();</span><br><span class="line">    AbstractPay creditCardPay = factory2.getPayMethod();</span><br><span class="line">    creditCardPay.pay();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/2019-9/2.png" alt="图片不见了"></p>
+<p>总结：</p>
+<blockquote>
+<p>优点：</p>
+<ul>
+<li>具有很好的可扩展性。当要添加新的产品时，只需要添加产品类和对应产品的工厂类，不需要修改已有代码，完全符合“开闭原则”。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>针对每一个产品都需要有一个工厂类，增加了系统的复杂度。</li>
+</ul>
+</blockquote>
+<h4 id="3-抽象工厂模式"><a href="#3-抽象工厂模式" class="headerlink" title="3.抽象工厂模式"></a>3.抽象工厂模式</h4><p>抽象工厂模式是工厂方法模式的泛化版，工厂方法模式是一种特殊的抽象工厂方法模式。在工厂方法模式中，每一个具体的工厂只能生产一种具体的产品。而在抽象工厂模式中，每一个的具体的工厂可以产生多个具体的产品，一个工厂生产的所有产品构成一个产品族。</p>
+<p>抽象工厂模式中的角色：</p>
+<ul>
+<li><p>AbstractFactory（抽象工厂）</p>
+<p>用于声明生成抽象产品的方法，在一个抽象工厂中可以定义一组方法，每一个方法对应一个产品等级结构。</p>
+</li>
+<li><p>ConcreteFactory（具体工厂）</p>
+<p>具体工厂实现了抽象工厂声明的生成抽象产品的方法，生成一组具体的产品。这些产品构成一个产品族，每一个产品都位于某个产品等级结构中。</p>
+</li>
+<li><p>AbstractProduct（抽象产品）</p>
+<p>抽象产品为每种产品声明接口，在抽象产品中定义了产品的抽象业务方法。</p>
+</li>
+<li><p>ConcreteProduct（具体产品）</p>
+<p>具体产品定义具体工厂生产的具体产品对象，实现抽象产品接口中定义的业务方法。</p>
+</li>
+</ul>
+<p>案例：</p>
+<p>电视接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TV</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">play</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>空调接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">AirConditioner</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changeTemperature</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Haier电视类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HaierTV</span> <span class="keyword">implements</span> <span class="title">TV</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">play</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"海尔电视机播放。。。。。。"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Haier空调类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HaierAirConditioner</span> <span class="keyword">implements</span> <span class="title">AirConditioner</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changeTemperature</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"海尔空调改变温度....."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>TCL电视类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TCLTV</span> <span class="keyword">implements</span> <span class="title">TV</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">play</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"TCL 电视机播放....."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>TCL空调类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TCLAirConditioner</span> <span class="keyword">implements</span> <span class="title">AirConditioner</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changeTemperature</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"TCL空调改变温度......."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>工厂类接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">EFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TV <span class="title">productTV</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> AirConditioner <span class="title">productAirConditioner</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Haier工厂类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HaierFactory</span> <span class="keyword">implements</span> <span class="title">EFactory</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TV <span class="title">productTV</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> HaierTV();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> AirConditioner <span class="title">productAirConditioner</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> HaierAirConditioner();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>TCL工厂类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TCLFactory</span> <span class="keyword">implements</span> <span class="title">EFactory</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TV <span class="title">productTV</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> TCLTV();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> AirConditioner <span class="title">productAirConditioner</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> TCLAirConditioner();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    EFactory factory = <span class="keyword">new</span> HaierFactory();</span><br><span class="line">    TV tv = factory.productTV();</span><br><span class="line">    tv.play();</span><br><span class="line">    AirConditioner airConditioner = factory.productAirConditioner();</span><br><span class="line">    airConditioner.changeTemperature();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/2019-9/3.png" alt="图片不见了"></p>
+<p>总结：</p>
+<blockquote>
+<p>抽象工厂模式的优点：</p>
+<ul>
+<li>抽象工厂可以实现高内聚低耦合的设计目的。</li>
+<li>增加新的具体工厂和产品族很方便，无需修改已有的系统，符合“开闭原则”。</li>
+</ul>
+<p>抽象工厂模式的缺点：</p>
+<ul>
+<li>在添加新的产品对象时，难以扩展抽象工厂来生产新种类的产品，这是因为在抽象工厂角色中规定了所有可能被创建的产品集合，要支持新种类的产品就意味着要对接口进行扩展，而这涉及对抽象工厂角色及其子类的修改。</li>
+</ul>
+</blockquote>
+<h4 id="4-建造者模式"><a href="#4-建造者模式" class="headerlink" title="4.建造者模式"></a>4.建造者模式</h4>
     </div>
 
     
@@ -572,7 +770,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、创建型模式"><span class="nav-number">1.</span> <span class="nav-text">一、创建型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-简单工厂模式"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">1.简单工厂模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-工厂方法模式"><span class="nav-number">1.0.0.0.2.</span> <span class="nav-text">2.工厂方法模式</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、设计模式概述"><span class="nav-number">1.</span> <span class="nav-text">一、设计模式概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-面向对象设计原则"><span class="nav-number">1.1.</span> <span class="nav-text">1.面向对象设计原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-设计模式的分类"><span class="nav-number">1.2.</span> <span class="nav-text">2.设计模式的分类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、创建型模式"><span class="nav-number">2.</span> <span class="nav-text">二、创建型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-简单工厂模式"><span class="nav-number">2.1.</span> <span class="nav-text">1.简单工厂模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-工厂方法模式"><span class="nav-number">2.2.</span> <span class="nav-text">2.工厂方法模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-抽象工厂模式"><span class="nav-number">2.3.</span> <span class="nav-text">3.抽象工厂模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-建造者模式"><span class="nav-number">2.4.</span> <span class="nav-text">4.建造者模式</span></a></li></ol></li></ol></div>
             
 
           </div>

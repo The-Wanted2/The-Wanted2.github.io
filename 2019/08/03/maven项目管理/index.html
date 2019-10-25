@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="一、maven的安装与配置下载某个版本的maven并解压到某个路径下，接下来需要配置maven的环境变量：    M2_HOME = [maven的解压路径]path = %M2_HOME%\bin    配置好后在cmd中输入 mvn -v 测试配置是否成功">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-04T07:43:57.625Z">
+<meta property="og:updated_time" content="2019-10-23T09:44:04.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="maven项目管理">
 <meta name="twitter:description" content="一、maven的安装与配置下载某个版本的maven并解压到某个路径下，接下来需要配置maven的环境变量：    M2_HOME = [maven的解压路径]path = %M2_HOME%\bin    配置好后在cmd中输入 mvn -v 测试配置是否成功">
@@ -300,7 +300,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-04 15:43:57" itemprop="dateModified" datetime="2019-08-04T15:43:57+08:00">2019-08-04</time>
+                <time title="修改时间：2019-10-23 17:44:04" itemprop="dateModified" datetime="2019-10-23T17:44:04+08:00">2019-10-23</time>
               </span>
             
           
@@ -340,30 +340,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="一、maven的安装与配置"><a href="#一、maven的安装与配置" class="headerlink" title="一、maven的安装与配置"></a>一、maven的安装与配置</h1><p><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">下载</a>某个版本的maven并解压到某个路径下，接下来需要配置maven的环境变量：  </p>
+        <h3 id="一、maven的安装与配置"><a href="#一、maven的安装与配置" class="headerlink" title="一、maven的安装与配置"></a>一、maven的安装与配置</h3><p><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">下载</a>某个版本的maven并解压到某个路径下，接下来需要配置maven的环境变量：  </p>
 <blockquote>
 <p>M2_HOME = [maven的解压路径]<br>path = %M2_HOME%\bin  </p>
 </blockquote>
 <p>配置好后在cmd中输入 mvn -v 测试配置是否成功</p>
 <a id="more"></a>
 
-<h1 id="二、maven本地仓库"><a href="#二、maven本地仓库" class="headerlink" title="二、maven本地仓库"></a>二、maven本地仓库</h1><p>maven会在本地创建一个仓库，用来存放从maven中央仓库下载下来的jar包和maven插件，本地仓库的地址默认为： </p>
+<h3 id="二、maven本地仓库"><a href="#二、maven本地仓库" class="headerlink" title="二、maven本地仓库"></a>二、maven本地仓库</h3><p>maven会在本地创建一个仓库，用来存放从maven中央仓库下载下来的jar包和maven插件，本地仓库的地址默认为： </p>
 <blockquote>
 <p>C:\user\~\.m2\repository。 </p>
 </blockquote>
 <p>可以修改 apache-maven-*\conf\settings.xml 中的配置来修改本地仓库的路径，配置如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;localRepository&gt;[本地仓库指定路径]&lt;/localRepository&gt;</span><br></pre></td></tr></table></figure>
 
-<h1 id="三、手动创建maven工程"><a href="#三、手动创建maven工程" class="headerlink" title="三、手动创建maven工程"></a>三、手动创建maven工程</h1><p><strong>以项目Hello为例</strong></p>
-<ol>
-<li>项目的目录结构<br>这是maven项目固定的目录结构<br>Hello<br>|—src<br>|—|—main<br>|—|—|—java （项目主要代码）<br>|—|—|—resources （一般存放项目的一些配置文件）<br>|—|—test<br>|—|—|—java （项目测试程序）<br>|—|—|—resources （存放项目测试程序的一些配置文件）<br>|—pom.xml  （在该文件中配置项目所依赖的jar包和插件）</li>
-<li>pom.xml文件的内容<br>在该文件中主要配置的是maven项目依赖的jar包以及插件，内容如下：</li>
-</ol>
+<h3 id="三、手动创建maven工程"><a href="#三、手动创建maven工程" class="headerlink" title="三、手动创建maven工程"></a>三、手动创建maven工程</h3><p><strong>以项目Hello为例</strong></p>
+<p>1.项目的目录结构</p>
+<p>  这是maven项目固定的目录结构<br>  Hello<br>  |—src<br>  |—|—main<br>  |—|—|—java （项目主要代码）<br>  |—|—|—resources （一般存放项目的一些配置文件）<br>  |—|—test<br>  |—|—|—java （项目测试程序）<br>  |—|—|—resources （存放项目测试程序的一些配置文件）<br>  |—pom.xml  （在该文件中配置项目所依赖的jar包和插件）<br>2.pom.xml文件的内容</p>
+<p>  在该文件中主要配置的是maven项目依赖的jar包以及插件，内容如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; ?&gt;</span><br><span class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  </span><br><span class="line">	xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line">	&lt;!-- </span><br><span class="line">	 下面是对项目名称及版本信息的配置，根据下面的配置，</span><br><span class="line">	 打包产生的jar包为：</span><br><span class="line">		Hello-0.0.1-SNAPSHOT.jar</span><br><span class="line">	--&gt;</span><br><span class="line">	&lt;groupId&gt;com.jizuhao.maven&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;Hello&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span><br><span class="line">	&lt;name&gt;Hello&lt;/name&gt;</span><br><span class="line">	  </span><br><span class="line">	&lt;!--</span><br><span class="line">	 工程所以依赖的jar包</span><br><span class="line">	--&gt;</span><br><span class="line">	&lt;dependencies&gt;</span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">			&lt;version&gt;4.0&lt;/version&gt;</span><br><span class="line">			&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br><span class="line">	&lt;/dependencies&gt;</span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
 
-<ol start="3">
-<li>主程序<br>在src/main/java/com/jizuhao/maven目录下新建文件Hello.java，内容如下:</li>
-</ol>
+<p>3.主程序</p>
+<p>  在src/main/java/com/jizuhao/maven目录下新建文件Hello.java，内容如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">package com.jizuhao.maven;</span><br><span class="line">public class Hello &#123;</span><br><span class="line">	public String sayHello(String name)&#123;</span><br><span class="line">		return &quot;Hello &quot;+name+&quot;!&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
@@ -371,12 +369,12 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package com.jizuhao.maven;	</span><br><span class="line">import org.junit.Test;</span><br><span class="line">import static junit.framework.Assert.*;</span><br><span class="line">public class HelloTest &#123;</span><br><span class="line">	@Test</span><br><span class="line">	public void testHello()&#123;</span><br><span class="line">		Hello hello = new Hello();</span><br><span class="line">		String results = hello.sayHello(&quot;litingwei&quot;);</span><br><span class="line">		assertEquals(&quot;Hello litingwei!&quot;,results);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="四、maven常用的命令"><a href="#四、maven常用的命令" class="headerlink" title="四、maven常用的命令"></a>四、maven常用的命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mvn compile		编译主程序</span><br><span class="line">mvn clean		清理编译和打包产生的target文件夹</span><br><span class="line">mvn test-complie	编译测试程序</span><br><span class="line">mvn test		运行测试程序</span><br><span class="line">mvn package		将项目打成jar包，</span><br><span class="line">mvn install		将工程放入本地仓库中，这样就能向引用其他jar包一样，引用该工程中的jar包。</span><br></pre></td></tr></table></figure>
+<h3 id="四、maven常用的命令"><a href="#四、maven常用的命令" class="headerlink" title="四、maven常用的命令"></a>四、maven常用的命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mvn compile		编译主程序</span><br><span class="line">mvn clean		清理编译和打包产生的target文件夹</span><br><span class="line">mvn test-complie	编译测试程序</span><br><span class="line">mvn test		运行测试程序</span><br><span class="line">mvn package		将项目打成jar包，</span><br><span class="line">mvn install		将工程放入本地仓库中，这样就能向引用其他jar包一样，引用该工程中的jar包。</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>注意：在cmd中运行Maven命令时一定要进入pom.xml文件所在的目录！</p>
 </blockquote>
-<h1 id="五、jar包的生命周期"><a href="#五、jar包的生命周期" class="headerlink" title="五、jar包的生命周期"></a>五、jar包的生命周期</h1><p>在引入jar包时，需要指定一个属性scope，这个属性指定jar包的作用范围，总共有如下5种取值：</p>
+<h3 id="五、jar包的生命周期"><a href="#五、jar包的生命周期" class="headerlink" title="五、jar包的生命周期"></a>五、jar包的生命周期</h3><p>在引入jar包时，需要指定一个属性scope，这个属性指定jar包的作用范围，总共有如下5种取值：</p>
 <ul>
 <li>compile：<br>scope的默认值，表示jar包可以在整个生命周期中使用。项目发布之后jar包也跟随发布</li>
 <li>provided：<br>跟compile相似，但是表明了jar包由JDK或者容器提供，例如：Servlet API和一些JavaEE API。这个scope 只能作用在编译和测试时，同时不具有传递性，jar包不会跟随项目一起发布。</li>
@@ -384,7 +382,7 @@
 <li>test:<br>表示jar包作用在测试时，不作用在运行时。 只在测试时使用，用于编译和运行测试代码，不会随项目发布。</li>
 <li>system:<br>跟provided相似，但是在系统中要以外部JAR包的形式提供，maven不会在仓库中查找它。</li>
 </ul>
-<h1 id="六、maven的基本配置"><a href="#六、maven的基本配置" class="headerlink" title="六、maven的基本配置"></a>六、maven的基本配置</h1><ol>
+<h3 id="六、maven的基本配置"><a href="#六、maven的基本配置" class="headerlink" title="六、maven的基本配置"></a>六、maven的基本配置</h3><ol>
 <li>设置maven依赖的jdk版本<br>打开settings.xml文件，找到profiles标签，加入如下配置：</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line">&lt;id&gt;jdk-1.7&lt;/id&gt;</span><br><span class="line">&lt;activation&gt;</span><br><span class="line">	&lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span><br><span class="line">	&lt;jdk&gt;1.7&lt;/jdk&gt;</span><br><span class="line">&lt;/activation&gt;</span><br><span class="line">	&lt;properties&gt;</span><br><span class="line">		&lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;</span><br><span class="line">		&lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;</span><br><span class="line">		&lt;maven.compiler.compilerVersion&gt;1.7&lt;/maven.compiler.compilerVersion&gt;</span><br><span class="line">	&lt;/properties&gt;</span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure>
@@ -394,14 +392,14 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">	&lt;id&gt;alimaven&lt;/id&gt;</span><br><span class="line">	&lt;mirrorOf&gt;central&lt;/mirrorOf&gt;  </span><br><span class="line">	&lt;name&gt;aliyun maven&lt;/name&gt;</span><br><span class="line">	&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;      </span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
 
-<h1 id="七、依赖关系的传递"><a href="#七、依赖关系的传递" class="headerlink" title="七、依赖关系的传递"></a>七、依赖关系的传递</h1><p>假设存在项目MakeFriend、HelloFriend、Hello三个项目,其中MakeFriend依赖项目HelloFriend,HelloFriend依赖项目Hello。那么在项目HelloFriend种只需要导入HelloFriend,就会自动将Hello也加入到MakeFriend的依赖中。</p>
+<h3 id="七、依赖关系的传递"><a href="#七、依赖关系的传递" class="headerlink" title="七、依赖关系的传递"></a>七、依赖关系的传递</h3><p>假设存在项目MakeFriend、HelloFriend、Hello三个项目,其中MakeFriend依赖项目HelloFriend,HelloFriend依赖项目Hello。那么在项目HelloFriend种只需要导入HelloFriend,就会自动将Hello也加入到MakeFriend的依赖中。</p>
 <blockquote>
 <p>注意:这种依赖的传递只存在于scope为complie类型的依赖。</p>
 </blockquote>
-<h1 id="八、依赖的排除"><a href="#八、依赖的排除" class="headerlink" title="八、依赖的排除"></a>八、依赖的排除</h1><p>情景：<br>项目B依赖项目A，项目C依赖项目B，由于依赖的传递性，C在引入依赖B的同时会引入A，但是C不想引入B依赖的A，这时候就需要使用依赖的排除使得C不引入依赖A。在项目C的pom.xml文件中，引入项目B的时候添加如下内容，就能排除对A的依赖。</p>
+<h3 id="八、依赖的排除"><a href="#八、依赖的排除" class="headerlink" title="八、依赖的排除"></a>八、依赖的排除</h3><p>情景：<br>项目B依赖项目A，项目C依赖项目B，由于依赖的传递性，C在引入依赖B的同时会引入A，但是C不想引入B依赖的A，这时候就需要使用依赖的排除使得C不引入依赖A。在项目C的pom.xml文件中，引入项目B的时候添加如下内容，就能排除对A的依赖。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;exclusions&gt;</span><br><span class="line">	&lt;exclusion&gt;</span><br><span class="line">		&lt;groupId&gt;A的groupId&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;A的artifactId&lt;/artifactId&gt;</span><br><span class="line">	&lt;/exclusion&gt;</span><br><span class="line">&lt;/exclusions&gt;</span><br></pre></td></tr></table></figure>
 
-<h1 id="九、maven依赖传递的原则"><a href="#九、maven依赖传递的原则" class="headerlink" title="九、maven依赖传递的原则"></a>九、maven依赖传递的原则</h1><ul>
+<h3 id="九、maven依赖传递的原则"><a href="#九、maven依赖传递的原则" class="headerlink" title="九、maven依赖传递的原则"></a>九、maven依赖传递的原则</h3><ul>
 <li><p>情景1：<br>项目B依赖低版本的项目A，项目C依赖高版本的A和B，如果在C中引入B和高版本的A，则低版本的A不会被自动引入到C中。</p>
 </li>
 <li><p>情景2：<br>项目B依赖低版本的项目A，项目C依赖B和高版本的A，项目D依赖C，如果在D中只明确引入C，这时候传递给D的是高版本的A。因为maven依赖的传递按照的是就近原则。</p>
@@ -409,10 +407,10 @@
 <li><p>情景3：<br>项目B依赖低版本的项目A，项目C依赖高版本的A，项目D依赖B和C，这时候maven按照先引入优先的原则，来自动引入A。如果D先引入B，则自动引入低版本的A，如果D先引入C则自动引入高版本的A。</p>
 </li>
 </ul>
-<h1 id="十、pom-xml中的properties标签"><a href="#十、pom-xml中的properties标签" class="headerlink" title="十、pom.xml中的properties标签"></a>十、pom.xml中的properties标签</h1><p>在properties中可以自定义标签，然后在pom.xml的其他位置可以使用“${自定义标签名}”来引用自定义标签的值。<br>例如:<br>通过在properties中自定义标签<spring-version>来统一管理spring各jar包的版本号</spring-version></p>
+<h3 id="十、pom-xml中的properties标签"><a href="#十、pom-xml中的properties标签" class="headerlink" title="十、pom.xml中的properties标签"></a>十、pom.xml中的properties标签</h3><p>在properties中可以自定义标签，然后在pom.xml的其他位置可以使用“${自定义标签名}”来引用自定义标签的值。<br>例如:<br>通过在properties中自定义标签<spring-version>来统一管理spring各jar包的版本号</spring-version></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;properties&gt;</span><br><span class="line">	&lt;spring-version&gt;4.3.7.RELEASE&lt;/spring-version&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">	&lt;!--引入spring、springmvc需要的包--&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">	    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">	    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;</span><br><span class="line">	    &lt;version&gt;$&#123;spring-version&#125;&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	&lt;!--事务控制需要的jar--&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">	    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">	    &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;</span><br><span class="line">	    &lt;version&gt;$&#123;spring-version&#125;&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	&lt;!--面向切面编程的jar--&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">	    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">	    &lt;artifactId&gt;spring-aspects&lt;/artifactId&gt;</span><br><span class="line">	    &lt;version&gt;$&#123;spring-version&#125;&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
 
-<h1 id="十一、聚合与继承"><a href="#十一、聚合与继承" class="headerlink" title="十一、聚合与继承"></a>十一、聚合与继承</h1><h2 id="1-继承"><a href="#1-继承" class="headerlink" title="1. 继承"></a>1. 继承</h2><ul>
+<h3 id="十一、聚合与继承"><a href="#十一、聚合与继承" class="headerlink" title="十一、聚合与继承"></a>十一、聚合与继承</h3><h4 id="1-继承"><a href="#1-继承" class="headerlink" title="1. 继承"></a>1. 继承</h4><ul>
 <li><p>情景：<br>Hello依赖的junit为4.0版本，HelloFriend依赖的junit为4.0版本，MakeFriends依赖的junit为4.9版本。由于test类型的依赖不能传递，所以必然会分散在各个模块中，很容易造成版本不一致。</p>
 </li>
 <li><p>需求：<br>统一管理各模块中junit依赖的版本。</p>
@@ -454,13 +452,13 @@
 <ul>
 <li>特别注意：<br>使用了继承之后install的时候必须要先install父工程</li>
 </ul>
-<h2 id="2-聚合"><a href="#2-聚合" class="headerlink" title="2. 聚合"></a>2. 聚合</h2><ul>
+<h4 id="2-聚合"><a href="#2-聚合" class="headerlink" title="2. 聚合"></a>2. 聚合</h4><ul>
 <li>作用：<br>在父工程中声明聚合之后，就只需要install父工程就能自动完成对子工程的install</li>
 <li>操作：<br>在上述父工程的pom.xml中加入如下内容，完成项目的聚合</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!--创建聚合--&gt;</span><br><span class="line"> &lt;modules&gt;</span><br><span class="line">&lt;!-- 各个子工程的相对路径 --&gt;</span><br><span class="line">&lt;module&gt;../Hello&lt;/module&gt;</span><br><span class="line">&lt;module&gt;../HelloFriend&lt;/module&gt;</span><br><span class="line">&lt;module&gt;../makeFriend&lt;/module&gt;</span><br><span class="line"> &lt;/modules&gt;</span><br></pre></td></tr></table></figure>
 
-<h1 id="十二、在idea上使用maven开发web项目"><a href="#十二、在idea上使用maven开发web项目" class="headerlink" title="十二、在idea上使用maven开发web项目"></a>十二、在idea上使用maven开发web项目</h1><ol>
+<h3 id="十二、在idea上使用maven开发web项目"><a href="#十二、在idea上使用maven开发web项目" class="headerlink" title="十二、在idea上使用maven开发web项目"></a>十二、在idea上使用maven开发web项目</h3><ol>
 <li>创建项目<br>选择maven-&gt;选择骨架为webApps-&gt;在src/main下面创建java文件夹，然后make dir as resources root-&gt;再src下创建test文件夹，然后make dir as test resources root</li>
 <li>加入插件方便调试<br>在项目中加入这个插件之后，只需要点击maven-&gt;plugins-&gt;tomcat7-&gt;run就能启动项目，方便对项目进行调试</li>
 </ol>
@@ -682,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、maven的安装与配置"><span class="nav-number">1.</span> <span class="nav-text">一、maven的安装与配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、maven本地仓库"><span class="nav-number">2.</span> <span class="nav-text">二、maven本地仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、手动创建maven工程"><span class="nav-number">3.</span> <span class="nav-text">三、手动创建maven工程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、maven常用的命令"><span class="nav-number">4.</span> <span class="nav-text">四、maven常用的命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、jar包的生命周期"><span class="nav-number">5.</span> <span class="nav-text">五、jar包的生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、maven的基本配置"><span class="nav-number">6.</span> <span class="nav-text">六、maven的基本配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、依赖关系的传递"><span class="nav-number">7.</span> <span class="nav-text">七、依赖关系的传递</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、依赖的排除"><span class="nav-number">8.</span> <span class="nav-text">八、依赖的排除</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、maven依赖传递的原则"><span class="nav-number">9.</span> <span class="nav-text">九、maven依赖传递的原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十、pom-xml中的properties标签"><span class="nav-number">10.</span> <span class="nav-text">十、pom.xml中的properties标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十一、聚合与继承"><span class="nav-number">11.</span> <span class="nav-text">十一、聚合与继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-继承"><span class="nav-number">11.1.</span> <span class="nav-text">1. 继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-聚合"><span class="nav-number">11.2.</span> <span class="nav-text">2. 聚合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十二、在idea上使用maven开发web项目"><span class="nav-number">12.</span> <span class="nav-text">十二、在idea上使用maven开发web项目</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、maven的安装与配置"><span class="nav-number">1.</span> <span class="nav-text">一、maven的安装与配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、maven本地仓库"><span class="nav-number">2.</span> <span class="nav-text">二、maven本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、手动创建maven工程"><span class="nav-number">3.</span> <span class="nav-text">三、手动创建maven工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、maven常用的命令"><span class="nav-number">4.</span> <span class="nav-text">四、maven常用的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、jar包的生命周期"><span class="nav-number">5.</span> <span class="nav-text">五、jar包的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、maven的基本配置"><span class="nav-number">6.</span> <span class="nav-text">六、maven的基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、依赖关系的传递"><span class="nav-number">7.</span> <span class="nav-text">七、依赖关系的传递</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八、依赖的排除"><span class="nav-number">8.</span> <span class="nav-text">八、依赖的排除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#九、maven依赖传递的原则"><span class="nav-number">9.</span> <span class="nav-text">九、maven依赖传递的原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十、pom-xml中的properties标签"><span class="nav-number">10.</span> <span class="nav-text">十、pom.xml中的properties标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十一、聚合与继承"><span class="nav-number">11.</span> <span class="nav-text">十一、聚合与继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-继承"><span class="nav-number">11.1.</span> <span class="nav-text">1. 继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-聚合"><span class="nav-number">11.2.</span> <span class="nav-text">2. 聚合</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十二、在idea上使用maven开发web项目"><span class="nav-number">12.</span> <span class="nav-text">十二、在idea上使用maven开发web项目</span></a></li></ol></div>
             
 
           </div>
